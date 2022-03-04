@@ -13,8 +13,6 @@ var app = express();
 
 mongoose.connect("mongodb://localhost:27017/tasks");
 
-app.set('port', process.env.PORT || 3000);
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -47,7 +45,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-app.listen(app.get('port'), function() {
-  console.log('Server started on ' + app.get('port'));
-});
