@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 // not certain the routes below are necessary as of 1 Mar 2022. tbc
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

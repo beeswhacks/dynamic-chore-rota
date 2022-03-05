@@ -1,29 +1,48 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-
-<meta charset="utf-8">
-<title>Howdily doodily</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-</head>
-
-<body>
-
-<div class="navbar navbar-default navbar-static-top" role="navigation">
-
-  <div class="container">
-
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Howdily doodily</a>
-    </div>
-
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="/login">Log in</a></li>
-        <li><a href="/signup">Sign up</a></li>
-    </ul>
-
-  </div>
-
-</div>
+<html lang="en">
+    <head>
+        <title>Cleaning Rota</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            Chores
+        </header>
+        <div >
+            <div class="cleanerContainer"> 
+                <div class="cleanerName">
+                    Faith
+                </div>
+                <div class="cleanerContent">
+                    <div>
+                        <p id="faithLastWeek" class="cleaningTasks"></p>
+                    </div>
+                    <div>
+                        <p id="faithThisWeek" class="cleaningTasks"></p>
+                    </div>
+                    <div>
+                        <p id="faithNextWeek" class="cleaningTasks"><br></p>
+                    </div>
+                </div>
+            </div> 
+        <div class="cleanerContainer"> 
+            <div class="cleanerName">
+                Jack
+            </div>
+            <div id="jackContent" class="cleanerContent">
+                <div>
+                    <p id="jackLastWeek" class="cleaningTasks"></p>
+                </div>
+                <div>
+                    <p id="jackThisWeek" class="cleaningTasks"></p>
+                </div>
+                <div>
+                    <p id="jackNextWeek" class="cleaningTasks"><br></p>
+                </div>
+            </div>
+        </div> 
+        <div id="footer">
+            <p id="footerPara"></p>
+        </div>
+        <script src="javascripts/main.js"></script>
