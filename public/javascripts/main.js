@@ -20,23 +20,38 @@ var startWeek2 = daysInWeek2[0];
 var startWeek3 = daysInWeek3[0];
 var startWeek4 = daysInWeek4[0];
 
-function getDaysSinceCycleStart (startDate) {
-    // Rota is on a 4 week cycle, so (7 * 4) days in each cycle
-    var daysInCycle = 7 * 4;
-
+function getDaysSinceStartDate (startDate, today) {
     // JavaScript stores date objects as milliseconds, so will need number of milliseconds in a day
-    var millisecondsInADay = 1000 * 60 * 60 * 24;
+    const millisecondsInADay = 1000 * 60 * 60 * 24;
 
-    dayDiff = Math.floor((today - startDate) / millisecondsInADay);
+    let dayDiff = Math.floor((today - startDate) / millisecondsInADay);
+
+    return dayDiff
+}
+var daysSinceStartDate = getDaysSinceStartDate(cycleStartDate, today);
+
+
+function getDaysSinceCycleStart (daysSinceStartDate) {
+    // Rota is on a 4 week cycle, so (7 * 4) days in each cycle
+    const daysInCycle = 7 * 4;
 
     // Rota completes a cycle in 4 weeks. 7 * 4 = number of days in a cycle.
     // dayDiff % (7 * 4) is therefore number of complete days since current cycle started.
-    daysSinceCycleStart = dayDiff % daysInCycle;
+    let daysSinceCycleStart = daysSinceStartDate % daysInCycle;
 
     return daysSinceCycleStart;
 }
+var daysSinceCycleStart = getDaysSinceCycleStart(cycleStartDate);
 
-daysSinceCycleStart = getDaysSinceCycleStart(cycleStartDate);
+// define function to get which week you're in from the number of days that have passed
+function daysToWeeks (days) {
+    // use ceil function as to counting from 1 e.g. if 3 days have passed this is in week 1, not week 0
+    let weeks = Math.ceil(days / 7);
+
+    return weeks;
+}
+var weeksSinceStartDate = daysToWeeks(daysSinceStartDate);
+
 
 function getWeekInCycle (daysSinceCycleStart) {
 
@@ -49,13 +64,13 @@ function getWeekInCycle (daysSinceCycleStart) {
     } else if (daysSinceCycleStart >= startWeek4 || daysSinceCycleStart == 0) {
         cycleWeek = 4;
     } else {
-        console.log("cycleWeek could not be determined. daysSinceCycleStart: " + daysSinceCycleStart);
+        console.error("cycleWeek could not be determined. daysSinceCycleStart: " + daysSinceCycleStart);
     }
 
     return cycleWeek;
 }
-
 var weekInCycle = getWeekInCycle(cycleStartDate);
+
 
 function getNextWeekInCycle (week) {
     week += 1;
@@ -66,8 +81,8 @@ function getNextWeekInCycle (week) {
 
     return week;
 }
-
 var nextWeekInCycle = getNextWeekInCycle(weekInCycle);
+
 
 function getLastWeekInCycle (week) {
     week -= 1;
@@ -78,16 +93,16 @@ function getLastWeekInCycle (week) {
 
     return week;
 }
-
 var lastWeekInCycle = getLastWeekInCycle(weekInCycle);
+
 
 function getDaysLeftInCycle (weekInCycle, daysSinceCycleStart) {
     var index = window['daysInWeek' + weekInCycle].indexOf(daysSinceCycleStart);
     var daysLeft = 7 - index;
     return daysLeft;
 }
-
 daysLeftInCycle = getDaysLeftInCycle(weekInCycle, daysSinceCycleStart);
+
 
 function getCountDownString (daysLeftInCycle) {
     if (daysLeftInCycle == 1) {
