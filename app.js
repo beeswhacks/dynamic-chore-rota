@@ -5,12 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 
-var routes = require('./routes/');
-var indexRouter = require('./routes/index');
+var routes = require('./routes/routes');
+// var indexRouter = require('./routes/index');
 
 var app = express();
 
-mongoose.connect("mongodb://localhost:27017/tasks");
+async function connect() {
+  mongoose.connect("mongodb://localhost:27017/choreRota").catch(err => console.error(err));
+}
+connect();
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -24,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 // not certain the routes below are necessary as of 1 Mar 2022. tbc
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

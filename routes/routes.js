@@ -1,13 +1,12 @@
 var express = require('express');
-var Task = require('./models/task');
+var Task = require('../models/task.js');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  Task.find()
-  .exec(function(err, users){
+  Task.find(function(err, tasks) {
     if (err) { return next(err); }
-    res.render('index', { title: 'Express' });
+    res.render('index', { tasks: tasks });
   });
 });
 

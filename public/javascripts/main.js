@@ -1,7 +1,7 @@
-var faithThisWeek = document.getElementById("faithThisWeek");
-var jackThisWeek = document.getElementById("jackThisWeek");
-var faithNextWeek = document.getElementById("faithNextWeek");
-var jackNextWeek = document.getElementById("jackNextWeek");
+// var faithThisWeek = document.getElementById("faithThisWeek");
+// var jackThisWeek = document.getElementById("jackThisWeek");
+// var faithNextWeek = document.getElementById("faithNextWeek");
+// var jackNextWeek = document.getElementById("jackNextWeek");
 var footerPara = document.getElementById("footerPara");
 
 // cycleStartDate should be the day before week 1 starts (e.g. Sunday 2nd, if Monday 1st is the first day of week 1)
@@ -172,14 +172,14 @@ class cleaner {
 jack = new cleaner('Jack', 1);
 faith = new cleaner('Faith', 2);
 
-jackLastWeek.innerHTML = jack.getCleaningStringInWeek(lastWeekInCycle);
-faithLastWeek.innerHTML = faith.getCleaningStringInWeek(lastWeekInCycle);
+// jackLastWeek.innerHTML = jack.getCleaningStringInWeek(lastWeekInCycle);
+// faithLastWeek.innerHTML = faith.getCleaningStringInWeek(lastWeekInCycle);
 
-jackThisWeek.innerHTML = jack.getCleaningStringInWeek(weekInCycle);
-faithThisWeek.innerHTML = faith.getCleaningStringInWeek(weekInCycle);
+// jackThisWeek.innerHTML = jack.getCleaningStringInWeek(weekInCycle);
+// faithThisWeek.innerHTML = faith.getCleaningStringInWeek(weekInCycle);
 
-jackNextWeek.innerHTML = jack.getCleaningStringInWeek(nextWeekInCycle);
-faithNextWeek.innerHTML = faith.getCleaningStringInWeek(nextWeekInCycle);
+// jackNextWeek.innerHTML = jack.getCleaningStringInWeek(nextWeekInCycle);
+// faithNextWeek.innerHTML = faith.getCleaningStringInWeek(nextWeekInCycle);
 
 jackThisWeek.scrollIntoView();
 faithThisWeek.scrollIntoView();
