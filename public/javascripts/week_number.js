@@ -8,9 +8,11 @@ function weeksSinceSeedDate (todayDate, seedDate) {
     // JavaScript stores date objects as milliseconds, so will need number of milliseconds in a day
     const MILLISECONDS_IN_A_WEEK = 1000 * 60 * 60 * 24 * 7;
 
-    let differenceInWeeks = Math.floor((todayDate - seedDate) / MILLISECONDS_IN_A_WEEK);
+    let differenceInWeeks = Math.ceil((todayDate - seedDate) / MILLISECONDS_IN_A_WEEK);
 
     return differenceInWeeks;
 };
 
 var weekNumber = weeksSinceSeedDate(todayDate, seedDate);
+
+exports.weekNumber = weekNumber;
