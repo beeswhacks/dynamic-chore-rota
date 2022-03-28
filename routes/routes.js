@@ -1,6 +1,6 @@
 var express = require('express');
 var Task = require('../models/task.js');
-const { weekNumber } = require('../public/javascripts/week_number.js');
+const { weekNumber } = require('../modules/week_number.js');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
