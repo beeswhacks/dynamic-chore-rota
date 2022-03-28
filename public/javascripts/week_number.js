@@ -15,4 +15,4 @@ function weeksSinceSeedDate (todayDate, seedDate) {
 
 var weekNumber = weeksSinceSeedDate(todayDate, seedDate);
 
-exports.weekNumber = weekNumber;
+module.exports = weekNumber;
