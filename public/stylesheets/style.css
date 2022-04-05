@@ -7,7 +7,7 @@
 body {
   background-color: #182027;
   margin: 0;
-  height: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -48,30 +48,29 @@ header {
   justify-content: space-between;
   margin-bottom: 1vw;
   margin-top: 1vw;
-  overflow-x: scroll;
-  scroll-snap-stop: always;
-  scroll-snap-type: x mandatory;
 }
 
-.cleanerContent::-webkit-scrollbar {
-  display: block;
-  height: 1vw;
-  background-color: #303d47;
-}
-
-.cleanerContent::-webkit-scrollbar-thumb {
-  background-color: white;
-}
-
-.cleaningTasks {
+.completeButton {
   align-items: center;
+  background-color: #27323b;
+  /* border-width: 1vw; */
+  border: solid;
+  border-radius: 1vw;
+  border-color: #00BE0E;
+  color: #00AB00;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  padding-left: 3vw;
+  padding-right: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   display: flex;
-  margin-top: 3vw;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-  min-width: 82vw;
-  scroll-snap-align: start;
-} 
+}
+
+.completeButton:hover {
+  background-color: #00BE0E;
+  color: white;
+}
 
 #footer {
   border-top: 2px solid #0f1418;
