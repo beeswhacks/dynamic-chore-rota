@@ -6,15 +6,10 @@
             <%= task.cleaner%>
         </div>
         <div class="cleanerContent">
-            <div>
-                <p class="cleaningTasks"> <%= task.room%> </p>
-            </div>
+            <p> <%= task.room%> </p>
+            <button class="completeButton" onclick="javascripts/update_status.js">Done &#10003;</button>
         </div>
     </div> 
 <% }) %>
-
-<div id="footer">
-    <p id="footerPara"></p>
-</div>
 
 <% include _footer %>
