@@ -11,8 +11,6 @@ router.get('/', function(req, res, next) {
     (err) => {
       if (err) {
         console.log(err);
-      } else {
-        console.log('Updated Kitchen');
       }
     }
     );
@@ -28,8 +26,6 @@ router.get('/', function(req, res, next) {
     (err) => {
       if (err) {
         console.log(err);
-      } else {
-        console.log('Updated Bathroom');
       }
     }
     );
