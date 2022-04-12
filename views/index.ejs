@@ -1,13 +1,14 @@
 <% include _header %>
 
 <% tasks.forEach(function(task) { %>
+    <% var _id = task._id %>
     <div class="cleanerContainer"> 
         <div class="cleanerName">
             <%= task.cleaner%>
         </div>
         <div class="cleanerContent">
-            <p> <%= task.room%> </p>
-            <button class="completeButton" onclick="javascripts/update_status.js">Done &#10003;</button>
+            <p> <%= task.room%>, <%= task.completionStatus %> </p>
+            <button class="completeButton" onclick="location.href='/task/<%= task._id %>'">Done &#10003;</button>
         </div>
     </div> 
 <% }) %>
