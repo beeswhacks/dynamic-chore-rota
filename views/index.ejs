@@ -1,4 +1,4 @@
-<% include _header %>
+<%- include('_header'); %>
 
 <% tasks.forEach(function(task) { %>
     <% var _id = task._id %>
@@ -11,6 +11,6 @@
             <button class="completeButton" onclick="location.href='/task/<%= task._id %>'">Done &#10003;</button>
         </div>
     </div> 
-<% }) %>
+<% }); %>
 
-<% include _footer %>
+<%- include('_footer') %>
