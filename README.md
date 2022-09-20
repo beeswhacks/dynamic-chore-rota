@@ -6,6 +6,10 @@ A dynamic chore rota, allowing tasks to be marked as completed for everyone usin
 ## Rationale
 This project was an exercise in making a dynamic web application. Before this, I had experimented with building static web pages using HTML and JavaScript, and had built a static chore rota (in my [chore-rota](https://github.com/beeswhacks/chore-rota) repo). I asked myself while I was building the static rota, "How do I make it so that each task can be marked complete? How can I do this so that the same information is available to all users of the page?". This is what led me to producing the dynamic version.
 
+## Running the app on localhost
+1. Start `mongod` in a terminal window.
+2. Run `npm start` in the top level of the `dynamic-chore-rota` repo.
+
 ## Learning and reflection
 I thought it would be good for my development to make a note of what I have learned from each project, and to reflect on my experience of completing it.
 
