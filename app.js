@@ -8,10 +8,12 @@ var mongoose = require('mongoose');
 var routes = require('./routes/routes');
 const Task = require('./models/task');
 
+const MONGODB_URI = process.env.MONGODB_URI;
+
 var app = express();
 
 async function connect() {
-  mongoose.connect("mongodb://localhost:27017/choreRota").catch(err => console.error(err));
+  mongoose.connect(MONGODB_URI).catch(err => console.error(err));
 }
 connect();
 
