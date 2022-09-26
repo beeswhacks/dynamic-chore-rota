@@ -1,6 +1,12 @@
 
 <div id="footer">
-    <p>X days left to complete tasks.</p>
+    <% if (days_left.DAYS_LEFT == 0) { %>
+        <p>Last day to complete tasks!</p>
+    <% } else if (days_left.DAYS_LEFT == 1) { %>
+        <p> <%= days_left.DAYS_LEFT %> day left to complete tasks.</p>
+    <% } else { %>
+    <p> <%= days_left.DAYS_LEFT %> days left to complete tasks.</p>
+    <% }; %>
 </div>
 
 </body>
