@@ -1,7 +1,7 @@
 # dynamic-chore-rota
 A dynamic chore rota, allowing tasks to be marked as completed. This is a fork of my chore-rota project.
 
-https://dynamic-chore-rota.herokuapp.com/ (best viewed on mobile)
+https://dynamic-chore-rota.herokuapp.com/ (best viewed on mobile - use dev tools if you're on a computer)
 
 <img src="https://user-images.githubusercontent.com/90331266/163716282-908ef762-748f-4ef2-93c9-85709a096bc4.png" width="300">
 
@@ -19,7 +19,3 @@ I thought it would be good for my development to make a note of what I have lear
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Dunning%E2%80%93Kruger_Effect_01.svg" width="500">
 
 [^1]: 忍者猫, CC0, via Wikimedia Commons
-
-## TODO
-- [x] Deploy to Heroku
-- [ ] Tighten up styling of header
