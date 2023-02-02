@@ -1,7 +1,7 @@
 # dynamic-chore-rota
 A dynamic chore rota, allowing tasks to be marked as completed. This is a fork of my chore-rota project.
 
-https://dynamic-chore-rota.herokuapp.com/ (best viewed on mobile - use dev tools if you're on a computer. If it's not working it's probably because my MongoDB Atlas cluster is asleep, as it's only a free-tier cluster)
+https://dynamic-chore-rota.herokuapp.com/ (mobile only - use dev tools if you're on a computer. If it's not working it's probably because my MongoDB Atlas cluster is asleep, as it's only a free-tier cluster)
 
 <img src="https://user-images.githubusercontent.com/90331266/163716282-908ef762-748f-4ef2-93c9-85709a096bc4.png" width="300">
 
